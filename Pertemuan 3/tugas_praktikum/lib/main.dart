@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red),
         scaffoldBackgroundColor: Colors.black,
+        textTheme: GoogleFonts.montserratTextTheme(),
       ),
       home: Scaffold (
         appBar: AppBar(
@@ -28,8 +29,8 @@ class MyApp extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text("BERITA TERBARU", style: GoogleFonts.montserrat(textStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.white))),
-                  Text("ESPORT NEWS HARI INI", style: GoogleFonts.montserrat(textStyle: TextStyle(fontWeight: FontWeight.bold, color: Colors.white))),
+                  Text("BERITA TERBARU", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+                  Text("ESPORT NEWS HARI INI", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
                 ],
               ),
             ),
@@ -56,7 +57,7 @@ class MyApp extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text("Anything You Need to Know about EG", style: GoogleFonts.montserrat(textStyle: TextStyle(fontWeight: FontWeight.bold))),
+                  Text("Anything You Need to Know about EG", style: TextStyle(fontWeight: FontWeight.bold)),
                 ],
               ),
               height: 30,
@@ -66,7 +67,7 @@ class MyApp extends StatelessWidget {
             Container(
               color: Colors.redAccent,
               alignment: Alignment.centerLeft,
-              child: Text("\tView More ->", style: GoogleFonts.montserrat(textStyle: TextStyle(fontWeight: FontWeight.bold))),
+              child: Text("\tView More ->", style: TextStyle(fontWeight: FontWeight.bold)),
               height: 30,
               width: 400,
               margin: EdgeInsets.only(left: 20, right: 20),
@@ -97,7 +98,7 @@ class MyApp extends StatelessWidget {
                   constraints: BoxConstraints(
                     maxWidth: 200.0,
                   ),
-                child: Text("Watch, Play, and Collect, during VCT  2023", style: GoogleFonts.montserrat(textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 12))),
+                child: Text("Watch, Play, and Collect, during VCT  2023", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
                 ),
               ],
             ),
@@ -110,7 +111,7 @@ class MyApp extends StatelessWidget {
               width: 400,
               margin: EdgeInsets.only(left: 20, right: 20),
               alignment: Alignment.centerLeft,
-              child: Text("\tLos Angeles, Jul 29 2023", style: GoogleFonts.montserrat(textStyle: TextStyle(fontWeight: FontWeight.bold))),
+              child: Text("\tLos Angeles, Jul 29 2023", style: TextStyle(fontWeight: FontWeight.bold)),
             ),
             SizedBox(height: 10),
             Row(
@@ -138,7 +139,7 @@ class MyApp extends StatelessWidget {
                   constraints: BoxConstraints(
                     maxWidth: 200.0,
                   ),
-                child: Text("Announcement VCT//Off Season", style: GoogleFonts.montserrat(textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 12))),
+                child: Text("Announcement VCT//Off Season", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
                 ),
               ],
             ),
@@ -151,7 +152,7 @@ class MyApp extends StatelessWidget {
               width: 400,
               margin: EdgeInsets.only(left: 20, right: 20),
               alignment: Alignment.centerLeft,
-              child: Text("\tLos Angeles, Aug 11 2023", style: GoogleFonts.montserrat(textStyle: TextStyle(fontWeight: FontWeight.bold))),
+              child: Text("\tLos Angeles, Aug 11 2023", style: TextStyle(fontWeight: FontWeight.bold)),
             ),
           ],
         ),
