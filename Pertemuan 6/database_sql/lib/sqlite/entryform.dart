@@ -17,9 +17,11 @@ class EntryFormState extends State<EntryForm> {
   @override
   Widget build(BuildContext context) {
     //Kondisi apabila Item tidak null / kosong
-    if (item != null) {
+    if (item.id != 0) {
     nameController.text = item.name;
     priceController.text = item.price.toString();
+    }else{
+      item.id = null;
     }
 
   //rubah
