@@ -8,11 +8,16 @@ class DbHelper {
   static DbHelper? _dbHelper;
   static Database? _database;
   DbHelper._createObject();
+
 Future<Database> initDb() async {
 
 //untuk menentukan nama database dan lokasi yg dibuat
   Directory directory = await getApplicationDocumentsDirectory();
   String path = directory.path + 'item.db';
+
+//Hapus Database terlebih dahulu (Cukup dilakukan sekali apabila ada perlu update table)
+//databaseFactory.deleteDatabase(path);
+
 
 //create, read databases
   var itemDatabase = openDatabase(path, version: 4, onCreate: _createDb);
@@ -21,13 +26,15 @@ Future<Database> initDb() async {
   return itemDatabase;
 }
 
-//buat tabel baru dengan nama item
+//buat tabel baru dengan nama item (dengan kondisi apabila tabel item sudah ada maka akan dihapus terlebih dahulu)
 void _createDb(Database db, int version) async {
   await db.execute('''
   CREATE TABLE item (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
+  kodebarang TEXT, 
   name TEXT,
-  price INTEGER
+  price INTEGER,
+  stok INTEGER
   )
   ''');
 }

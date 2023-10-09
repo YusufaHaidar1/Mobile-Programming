@@ -33,7 +33,7 @@ class HomeState extends State<Home> {
               child: ElevatedButton(
                 child: Text("Tambah Item"),
                 onPressed: () async {
-                  Item itema = Item('', 0);
+                  Item itema = Item('', 0, '', 0);
                   itema.id = 0;
                   var item = await navigateToEntryForm(context, itema);
                   if (item != null) {
@@ -79,7 +79,12 @@ class HomeState extends State<Home> {
                 child: Icon(Icons.ad_units),
               ),
               title: Text(this.itemList![index].name, style: textStyle,),
-              subtitle: Text(itemList2![index].price.toString()),
+              subtitle: Row(
+                children: [
+                  Text('Kode Barang: '+this.itemList![index].kodebarang),
+                  Text('\tHarga: '+itemList2![index].price.toString()),
+                  Text('\tStok: '+itemList2![index].stok.toString()),
+              ]),
               trailing: GestureDetector(
                 child: Icon(Icons.delete),
                 onTap: ()async {
