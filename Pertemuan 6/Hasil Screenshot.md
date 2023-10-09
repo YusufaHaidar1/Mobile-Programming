@@ -21,4 +21,7 @@ Tugas
 
 3. Penambahan Variabel KodeBarang dan Stok
 
+![image](https://github.com/YusufaHaidar1/Mobile-Programming/assets/91399445/de91fe91-6ce4-42c1-b280-a804fe21841d)
+
+![image](https://github.com/YusufaHaidar1/Mobile-Programming/assets/91399445/15afe622-f58b-4738-b4f1-862bba690527)
 
