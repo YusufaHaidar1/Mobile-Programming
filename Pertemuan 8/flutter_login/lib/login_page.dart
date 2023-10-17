@@ -45,7 +45,6 @@ class _LoginPageState extends State<LoginPage> {
   },
   style: OutlinedButton.styleFrom(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-      backgroundColor: Colors.grey,
       side: BorderSide(color: Colors.grey),
   ),
       child: Padding(
@@ -54,7 +53,7 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image(image: AssetImage("assets/google_logo.png"), height: 35.0),
+            Image.network("https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/240px-Google_%22G%22_Logo.svg.png", height: 35, width: 35,),
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
